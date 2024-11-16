@@ -21,13 +21,13 @@
     <h1 class="text-center mt-5 mb-5">Temperature Converter</h1>
 
     <div class="input-group mb-3 width-350 mx-auto">
-        <select class="form-select">
+        <select id="from" class="form-select" oninput="convert()">
             <option selected>From</option>
             <option value="celsius">Celsius (ºC)</option>
             <option value="fahrenheit">Fahrenheit (ºF)</option>
             <option value="kelvin">Kelvin (K)</option>
         </select>
-        <select class="form-select">
+        <select id="to" class="form-select" oninput="convert()">
             <option selected>To</option>
             <option value="celsius">Celsius (ºC)</option>
             <option value="fahrenheit">Fahrenheit (ºF)</option>
@@ -37,19 +37,21 @@
 
     <div class="input-group mb-3 width-350 mx-auto">
         
-        <input type="number" class="form-control">
-        <span class="input-group-text" id="basic-addon1">ºC</span>
+        <input type="number" id="value" class="form-control" oninput="convert()">
+        <span class="input-group-text" id="span-from"></span>
     </div>
 
     <div class="input-group mb-3 width-350 mx-auto">
         
-        <input type="number" class="form-control">
-        <span class="input-group-text" id="basic-addon1">ºF</span>
+        <input readonly type="number" id="result" class="form-control">
+        <span class="input-group-text" id="span-to"></span>
     </div>
 
+    <script src="script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 
 </html>
+
